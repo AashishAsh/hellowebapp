@@ -52,7 +52,7 @@ public class LoginServlet extends HttpServlet {
 			PreparedStatement ps = con.prepareStatement("select id,username,email,country from users where username=? and password=?");
 			ps.setString(1, userName);
 			ps.setString(2, passWord);
-			System.out.println("Trying to login...");
+			System.out.println("Trying to login multiple times...");
 			ResultSet rs = ps.executeQuery();
 			if(!rs.next()) {
 				out.println("<body text='red'>");
